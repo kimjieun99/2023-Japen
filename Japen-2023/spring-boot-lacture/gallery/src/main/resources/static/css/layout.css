@@ -1,0 +1,34 @@
+.form.insert {
+  width: 600px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.view.gallery {
+  width: 640px;
+  margin: 100px auto;
+}
+.view.gallery li .card {
+  padding: 20px;
+}
+.view.gallery li a {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+.list.gallery {
+  width: 640px;
+  margin: 100px auto;
+}
+.list.gallery li .card {
+  padding: 20px;
+}
+.list.gallery li a {
+  text-decoration: none;
+}

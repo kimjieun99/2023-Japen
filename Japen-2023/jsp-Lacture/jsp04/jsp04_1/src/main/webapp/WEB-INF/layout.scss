@@ -1,0 +1,162 @@
+@import "vars";
+body {
+  font-family: "Lato", "Pretendard", "Dotum", sans-serif;
+  font-size: 16px;
+  color: #111;
+  // vendor prefix
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #ccc;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #111;
+    border-radius: 100px;
+  }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+p {
+  line-height: 1.5;
+}
+
+.header {
+  /* header */
+  $h: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding: 0 50px;
+  height: $h;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  overflow: hidden; // 100px 넘어선 것들은 잘라버리겠다.
+  top: 0;
+  transition: all 0.25s ease;
+  // &:hover {
+  //   height: 380px;
+  //   background-color: #fff;
+  //   color: #111;
+  // }
+  &.scroll {
+    background-color: #fff;
+    color: #111;
+    .link {
+      border-color: #111;
+      color: #111;
+    }
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    opacity: 0;
+    transition: all 0.25s ease;
+    pointer-events: none;
+  }
+  &.on {
+    height: 380px;
+    background-color: #fff;
+    color: #111;
+    .link {
+      border-color: #111;
+      color: #111;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+  .logo {
+    &__link {
+      display: flex;
+      align-items: center;
+      height: $h;
+    }
+    &__img {
+      height: 50px;
+    }
+  }
+  .gnb {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      > li {
+        &:hover {
+          > a {
+            color: $blue;
+            &:after {
+              //width: 100%;
+              //left: 0;
+              transform: scaleX(1);
+            }
+          }
+        }
+        > a {
+          //font-size: 18px;
+          //font-weight: 700;
+          font: {
+            size: 18px;
+            weight: 700;
+          }
+          display: flex;
+          align-items: center;
+          height: $h;
+          padding: 0 60px;
+          position: relative;
+          //outline: 1px solid red;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $blue;
+            position: absolute;
+            left: 0;
+            //right: 0;
+            bottom: 0;
+            //width: 0;
+            transform: scaleX(0);
+            transition: all 0.25s ease;
+          }
+        }
+      }
+      .last {
+        border-right: 1px solid #ccc;
+      }
+      &--sub {
+        padding-top: 30px;
+        border-left: 1px solid #ccc;
+        height: 250px;
+        li {
+          a {
+            display: flex;
+            padding: 10px 0;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  .link {
+    border: 2px solid #fff;
+    padding: 20px 30px;
+    border-radius: 100px;
+    margin-top: 20px;
+  }
+}

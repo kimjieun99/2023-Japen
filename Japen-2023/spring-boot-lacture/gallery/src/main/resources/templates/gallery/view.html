@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+  <div class="view gallery">
+    <div class="card w-100">
+        <img th:src="@{|/upload/${GalleryDto.renamed}|}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" th:text="${GalleryDto.title}">Card title</h5>
+          <p class="card-text" th:text="${GalleryDto.contents}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <!--<a href="#" class="btn btn-primary w-100 btn-lg">LINK</a>-->
+          <div class="replyBox">
+            <ul>
+                <li>댓글이 출력되는 곳</li>
+            </ul>
+          </div>
+       </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Please Write Reply</label>
+            <textarea class="form-control reply" id="exampleFormControlTextarea1" rows="3"></textarea>
+       </div>
+       <div class="btns text-end">
+        <button class="btn btn-primary" id="btnConfirm">CONFIRM</button>
+       </div>
+  </div>
+  <div class="btns text-center">
+    <a href="/" class="btn btn-success">LIST</a>
+  </div>
+
+    
+  <script th:inline="javascript">
+    const galleryId = [[${galleryDto.no}]];
+    console.log(galleryId);
+    
+    
+    function loadReply() {
+      const sendData = {
+        galleryId:galleryId,
+      }  
+      $.ajax({
+        url:"/getReply/"+galleryId,
+        data:sendData,
+        type:"POST",
+        success:function(response) {
+          console.log(response);
+          let tempHtml="";
+          $.each(response,function(idx,item){
+            tempHtml+=`<li>${item.comments}</li>`
+          });
+          $(".replyBox ul").html(tempHtml);
+        }
+      })
+    }
+    loadReply();
+    
+    $("#btnConfirm").on("click",function(){
+      const sendData = {
+        galleryId:galleryId,
+        comments:$(".reply").val()
+      }
+      $.ajax({
+        url:"/insertReply",
+        data:sendData,
+        type:"POST",
+        success:function(response) {
+          //console.log(response);
+          let tempHtml="";
+          $.each(response,function(idx,item){
+            tempHtml+=`<li>${item.comments}</li>`
+          });
+          $(".replyBox ul").html(tempHtml);
+          $(".reply").val("");
+        }
+      })
+    })
+  </script>
+</body>
+</html>

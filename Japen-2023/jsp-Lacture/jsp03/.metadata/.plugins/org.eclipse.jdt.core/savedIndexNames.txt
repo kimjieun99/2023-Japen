@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\user\Desktop\2023 Japan\jsp-Lacture\jsp03\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index

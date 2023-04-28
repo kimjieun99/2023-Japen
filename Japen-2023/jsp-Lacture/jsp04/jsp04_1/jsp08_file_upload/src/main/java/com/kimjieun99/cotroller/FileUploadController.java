@@ -1,0 +1,71 @@
+package com.kimjieun99.cotroller;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.servlet.ServletContext;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.kimjieun99.model.ClockDao;
+import com.kimjieun99.model.ClockDto;
+import com.kimjieun99.utils.ScriptWriter;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
+@WebServlet("/file_upload")
+public class FileUploadController extends HttpServlet {
+
+	public FileUploadController() {
+		super();
+	}
+	protected void service(HttpServletRequest request, HttpServletResponse response) 
+			throws IOException
+	{
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		int fileSize = 1024*1024*50;
+		String encoding = "UTF-8";
+		DefaultFileRenamePolicy fileRenamePolicy = 
+				new DefaultFileRenamePolicy();
+	
+		
+		String savePath = "uploadClock";
+		ServletContext context = this.getServletContext();
+		String realPath = context.getRealPath(savePath);
+		
+		File dir = new File(realPath);
+		if(!dir.exists()) {
+			dir.mkdir();
+		}
+		
+		MultipartRequest multipartRequest = 
+				new MultipartRequest(request, realPath, fileSize, encoding, fileRenamePolicy);		
+		
+		String title = multipartRequest.getParameter("title");
+		String category = multipartRequest.getParameter("category");
+		int depth = Integer.parseInt(multipartRequest.getParameter("depth"));
+		int price = Integer.parseInt(multipartRequest.getParameter("price"));
+		String originalFile = multipartRequest.getOriginalFileName("file");
+		String renameFile = multipartRequest.getFilesystemName("file");
+		System.out.println(originalFile+"===="+renameFile);
+		
+		ClockDto clockDto = new ClockDto();
+		ClockDao clockDao = new ClockDao();
+		clockDto.setTitle(title);
+		clockDto.setCategory(category);
+		clockDto.setDepth(depth);
+		clockDto.setPrice(price);
+		clockDto.setClockImg(originalFile);
+		clockDto.setClockRealImg(renameFile);
+		int result = clockDao.insertClock(clockDto);
+		if(result>0) {
+			ScriptWriter.alertAndNext(response, "파일 업로드 성공", "/");
+		} else {
+			ScriptWriter.alertAndBack(response, "파일 업로드 실패");
+		}
+	}
+}

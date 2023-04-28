@@ -1,0 +1,81 @@
+@import "vars";
+
+body {
+  font-family: "Lato", "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #111;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.header {
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+}
+#gnb {
+  .list {
+    display: flex;
+    li {
+      a {
+        padding: 0 30px;
+      }
+    }
+  }
+}
+.footer {
+  display: flex;
+  padding: 50px 100px;
+  background-color: #111;
+  color: #fff;
+  justify-content: center;
+}
+
+.board {
+  width: 1200px;
+  margin: 100px auto;
+  th,
+  td {
+    padding: 15px;
+    border: 1px solid #ccc;
+  }    
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }     
+  textarea {
+    padding: 15px;
+    width: 100%;
+    resize: none;
+    overflow-y: auto;
+    min-height: 300px;
+    border: 1px solid #ccc;
+  }
+}
+
+.form {
+  .btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    button {
+      min-width: 120px;
+      padding: 20px 0;
+      margin: 0 5px;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      &.confrim {
+        background-color: skyblue;
+      }
+      &.reset {
+        background-color: #333;
+      }
+    }
+  }
+}

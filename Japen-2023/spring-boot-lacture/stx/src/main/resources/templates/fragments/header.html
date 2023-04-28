@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+    <th:block th:fragment="header">
+        <header id="header" class="header">
+            <div class="container">
+                <div class="inner">
+                    <h1 class="logo"><a href="/" class="ir">stx건설</a></h1>
+                    <nav class="gnb">
+                        <h2 class="ir">전체메뉴</h2>
+                        <ul class="depth1">
+                            <li>
+                                <a href="#none;">회사소개</a>
+                                <ul class="depth2">
+                                    <li><a href="/user/intro">인사말</a></li>
+                                    <li><a href="/user/construction">STX건설</a></li>
+                                    <li><a href="/user/culture">기업문화</a></li>
+                                    <li><a href="/user/history">STX건설연혁</a></li>
+                                    <li><a href="/user/organization">조직안내</a></li>
+                                    <li><a href="/user/ethics">윤리경영</a></li>
+                                    <li><a href="/user/safety">안전&middot보건&middot품질경영</a></li>
+                                    <!--li><a href="/user/ci" th:text="#{menu.180}">CI소개</a></li-->
+                                    <li><a href="/user/way">찾아오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none;">사업분야</a>
+                                <ul class="depth2">
+                                    <li><a href="/user/business/buildProject">건축사업</a></li>
+                                    <li><a href="/user/business/housingProject">주택사업</a></li>
+                                    <li><a href="/user/business/engineeringProject">토목사업</a></li>
+                                    <li><a href="/user/business/industryProject">플랜트/공작기계사업</a></li>
+                                    <li><a href="/user/business/overseaProject">해외사업</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none;">사회공헌</a>
+                                <ul class="depth2">
+                                    <li><a href="/user/think">나눔의생각</a></li>
+                                    <li><a href="/user/activity">주요활동분야</a></li>
+                                    <li><a href="/user/situation">활동현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none;">홍보센터</a>
+                                <ul class="depth2">
+                                    <li><a href="/user/pr/promotion">홍보동영상</a></li>
+                                    <li><a href="/user/pr/brochure">홍보브로슈어</a></li>
+                                    <li><a href="/user/companyNews/notice/list">STX건설뉴스</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none;">고객지원</a>
+                                <ul class="depth2">
+                                    <li><a href="/user/faq/list">자주묻는질문</a></li>
+                                    <li><a href="/user/inquiry">고객문의</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none;">채용정보</a>
+                                <ul class="depth2">
+                                    <li><a href="/user/recruitGuide">채용안내</a></li>
+                                    <li><a href="/user/recruitAnnounce/list">채용공고</a></li>
+                                    <li><a href="/user/recruitFaqs/list">채용FAQ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="lang">
+                        
+                        <a href="#none;" class="bar" id="changeLanguageEn">ENG</a>
+                        <a href="#none;" class="on" id="changeLanguageKo">KOR</a>
+                        
+                    </div>
+                </div>
+                <div class="dim_bg"></div>
+            </div>
+        </header>
+    </th:block>
+</body>
+</html>

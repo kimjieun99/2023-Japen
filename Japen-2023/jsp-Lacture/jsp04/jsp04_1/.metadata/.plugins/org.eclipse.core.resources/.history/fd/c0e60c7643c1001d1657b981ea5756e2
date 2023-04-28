@@ -1,0 +1,32 @@
+package com.kimjien99.cotroller;
+
+import java.io.UnsupportedEncodingException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/file_upload")
+public class FileUploadController {
+
+	public FileUploadController() {
+		super();
+	}
+	protected void service(HttpServletRequest request, HttpServletResponse response) 
+			throws UnsupportedEncodingException
+	{
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		int fileSize = 1024*1024*50;
+		String encoding = "UTF-8";
+		DefaultFileRenamePolicy fileRenamePolicy = new DefaultFileRenamePolicy();
+		
+		String savePath = "uploadClock";
+		
+		MultipartRequest multipart = new MultipartRequest(request, getServletName(),0,getServletInfo(),null);		
+		
+		String file = request.getParameter("file");
+		System.out.println(file);
+	}
+}

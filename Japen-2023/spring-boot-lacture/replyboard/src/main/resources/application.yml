@@ -1,0 +1,24 @@
+#server port 설정
+server:
+  port: 9090
+
+spring:
+  output:
+    ansi:
+      enabled: always
+
+  datasource: 
+    driver-class-name:  oracle.jdbc.driver.OracleDriver
+    url:  jdbc:oracle:thin:@localhost:1521:xe
+    username: KIMJIEUN99
+    password: 1112
+
+
+logging:
+  level:  
+    '[com.kimjieun99.replyboard]': DEBUG
+
+mybatis:
+  mapper-locations: classpath:mapper/sqlmapper/**/*.xml
+  config-location: classpath:mapper/config/config.xml
+   

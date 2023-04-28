@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file = "../include/footer.jsp"%>
+
+<main>
+<ul>
+<c:forEach items="${boardList}" var="boardDto" varStatus="status" end="3">
+<li>
+<span>${status.count}</span>
+
+</li>
+</c:forEach>
+</ul>
+</main>
+
+<%@ include file = "../include/footer.jsp"%>

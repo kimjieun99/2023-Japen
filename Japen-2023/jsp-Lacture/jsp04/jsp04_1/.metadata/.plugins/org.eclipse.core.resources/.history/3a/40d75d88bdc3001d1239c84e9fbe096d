@@ -1,0 +1,14 @@
+package com.kimjieun99.mybatis;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+public class MybatisConnectionFactory {
+	private static SqlSessionFactory sqlSessionFactory;
+	static {
+		String resource = "com/kimjieun99/config.xml";
+		inputStream = Resources.getResourceAsStream(resource);
+		sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+	}
+}

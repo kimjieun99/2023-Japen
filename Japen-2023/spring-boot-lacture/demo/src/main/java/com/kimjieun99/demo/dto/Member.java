@@ -1,0 +1,19 @@
+package com.kimjieun99.demo.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+public class Member {
+
+  private String userId;
+  private String userPw;
+  private String userName;
+  private String tel;
+  private String addr;
+}

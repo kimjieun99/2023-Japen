@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;src&apos; to &apos;src&apos;&#x0D;&#x0A;- Original project: &apos;jsp07_model02&apos;&#x0D;&#x0A;- Destination element: &apos;src&apos;&#x0D;&#x0A;- Original element: &apos;src&apos;" description="Copy folder" element1="src" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1678667842135" target="/jsp08_file_upload/src" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,140 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Practice10",
+            "request": "launch",
+            "mainClass": "Practice.Practice10",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice06",
+            "request": "launch",
+            "mainClass": "Practice.Practice06",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice09",
+            "request": "launch",
+            "mainClass": "Practice.Practice09",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice08",
+            "request": "launch",
+            "mainClass": "Practice.Practice08",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalendarEx",
+            "request": "launch",
+            "mainClass": "CalendarEx",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch MathEx",
+            "request": "launch",
+            "mainClass": "MathEx",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ObjectProperty",
+            "request": "launch",
+            "mainClass": "ObjectProperty",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice01",
+            "request": "launch",
+            "mainClass": "Practice.Practice01",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice02",
+            "request": "launch",
+            "mainClass": "Practice.Practice02",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice05",
+            "request": "launch",
+            "mainClass": "Practice.Practice05",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Practice07",
+            "request": "launch",
+            "mainClass": "Practice.Practice07",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch RectEx",
+            "request": "launch",
+            "mainClass": "RectEx",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringBufferEx",
+            "request": "launch",
+            "mainClass": "StringBufferEx",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringEx",
+            "request": "launch",
+            "mainClass": "StringEx",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringTokenizerEx",
+            "request": "launch",
+            "mainClass": "StringTokenizerEx",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ToString",
+            "request": "launch",
+            "mainClass": "ToString",
+            "projectName": "ch06_cce73d1"
+        },
+        {
+            "type": "java",
+            "name": "Launch GoodCalc",
+            "request": "launch",
+            "mainClass": "app.GoodCalc",
+            "projectName": "ch06_cce73d1"
+        }
+    ]
+}

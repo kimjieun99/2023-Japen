@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\Users\user\Desktop\2023 Japan\jsp-Lacture\jsp04\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2210218407.index
+\jsp04_1\src\main\java
+C:\Users\user\Desktop\2023 Japan\jsp-Lacture\jsp04\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1036962748.index
+\jsp04_1\src\main\java
+C:\Users\user\Desktop\2023 Japan\jsp-Lacture\jsp04\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3324545969.index
+\jsp04_1\src\main\java

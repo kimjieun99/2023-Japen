@@ -1,0 +1,49 @@
+#server port
+server: 
+  Port: 9090
+
+#spring setting
+spring:
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url:  jdbc:oracle:thin:@localhost:1521:xe
+    username: KIMJIEUN99
+    password: 1112
+    
+  jpa:
+    open-in-view: true
+    show-sql: true
+    database: oracle
+    database-platform:  org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    
+  # thymeleaf:
+  #   cache: false
+  
+  servlet:  
+    multipart:  
+      max-file-size:  10MB
+      max-request-size: 100MB
+
+  # autoconfigure:  
+  #   exclude:  org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+
+logging:
+  level:
+    root: INFO
+    '[com.kimjieun99.jpl]': DEBUG
+
+# mybatis:
+#   mapper-locations: classpath:mapper/sql/**/*.xml
+#   config-location: classpath:mapper/config/config.xml
+
+#나는 세팅 모든게 다 세팅
+
+file:
+  path: C:/gallery/upload/

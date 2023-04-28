@@ -1,0 +1,27 @@
+body {
+  font-family: "Noto Sans KR";
+}
+
+#contents {
+  min-height: 500px;
+}
+
+.space0 {
+  padding-left: 30px !important;
+}
+
+.space1 {
+  padding-left: 30px !important;
+}
+
+.space2 {
+  padding-left: 60px !important;
+}
+
+.space3 {
+  padding-left: 90px !important;
+}
+
+.space4 {
+  padding-left: 90px !important;
+}

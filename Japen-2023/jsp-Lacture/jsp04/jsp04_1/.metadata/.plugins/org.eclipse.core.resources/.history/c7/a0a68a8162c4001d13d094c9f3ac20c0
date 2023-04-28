@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kimjieun99.mybatis.board">
+<select id="getAllBoard" resultType="BoardDto">
+SELECT * FROM BOARD03 ORDER BY NO
+</select>
+<select id="getAllBoard02" resultType="BoardDto">
+SELECT * FROM
+(SELECT ROWNUM AS NUM,B.*FROM
+(SELECT * FROM BOARD03 ORDER BY NO DESC) B
+)WHERE NUM <![CDATA[>=]]> 1 AND NUM <![CDATA[<=]]> 3;
+</select>
+<update id="updateHit" parameterType="Integer" resultType="BoardDto">
+UPDATE BOARD03 SET HIT = HIT + WHERE NO = #{no}
+</update>
+<insert id="insertBoard" parameterType="BoardDto">
+INSERT INTO BOARD03 VALUES(BOARD_SEQ.NEXTVAL, 
+#{usernName},
+#{subject},
+#{contents},
+SYSDATE,
+0;
+)
+</insert>
+
+</mapper>

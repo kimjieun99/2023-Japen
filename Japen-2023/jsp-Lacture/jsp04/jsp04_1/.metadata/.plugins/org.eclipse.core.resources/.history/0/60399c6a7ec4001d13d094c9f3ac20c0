@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kimjieun99.mybatis.board">
+<select id="getTotal" resultType="Integer">
+	SELECT COUNT(*) AS TOTAL FROM BOARD03
+</select>
+<select id="getAllBoard" resultType="BoardDto">
+SELECT * FROM BOARD03 ORDER BY NO
+</select>
+<select id="getAllBoard02" resultType="BoardDto" parameterType="HashMap">
+SELECT * FROM
+(SELECT ROWNUM AS NUM,B.*FROM
+(SELECT * FROM BOARD03 ORDER BY NO DESC) B
+)WHERE NUM <![CDATA[>=]]> #{start} AND NUM <![CDATA[<=]]> #{end}
+</select>
+<select id="getSelectOne" parameterType="Integer" resultType="BoardDto">
+SELECT * FROM BOARD03 WHERE NO = #{no}
+</select>
+<insert id="insertBoard" parameterType="BoardDto">
+INSERT INTO BOARD03 VALUES(BOARD_SEQ.NEXTVAL, 
+#{userName},
+#{subject},
+#{contents},
+SYSDATE,
+0
+)
+</insert>
+<update id="updateHit" parameterType="Integer">
+UPDATE BOARD03 SET HIT = HIT + WHERE NO = #{no}
+</update>
+<update id="updateBoard" parameterType="BoardDto">
+UPDATE BOARD03 SET USERNAME = #{userName}, SUBJECT = #{subject},
+CONTENTS = #{contents} WHERE NO = #{no}
+</update>
+</mapper>

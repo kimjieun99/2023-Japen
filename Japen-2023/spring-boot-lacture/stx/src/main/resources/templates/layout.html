@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" 
+xmlns:th="http://www.thymeleaf.org" 
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/layout.css">
+    <script src="/js/jquery.3.6.4.min.js"></script>
+</head>
+<body>
+    <header th:replace="/fragments/header :: header">헤더</header>
+
+    <div id="container_sub">
+        <div class="top_title">
+            <h2>인사말</h2>
+        </div>
+        <!--  //top title -->
+
+        <div class="content greeting cont_wrap">
+         	
+         	<!-- 20200309. 회장 인사말 내림 
+            <div class="bg_greeting">
+                <div class="text_area">
+                    <p class="text01" th:text="#{intro.001}">‘窮卽通’</p>
+                    <p class="text02" th:text="#{intro.002}">2000년대 후반부터 이어진 미국발 유동성 위기는 세계 금융시장 위축과 글로벌 실물경제 하향 등 세계 경제의 장기 불황으로 이어져 대한민국 뿐만 아니라 유수 여러 나라의 기업들이 많은 어려움을 겪게 되었습니다. 그러나 저희 STX건설은 이러한 어려운 시기에도 우수한 해외건설 프로젝트 수행과 우수기술 확보 및 풍부한 시공실적에 더하여 모든 임직원들의 일치 단결로 위기에서 기회로의 새로운 시작, 재도약의 기회를 만들었습니다.  ‘비온 뒤에 땅이 더 굳어진다’ 라는 말이 있듯이 저희 STX건설 은 위기를 기회로 삼으며 또 ‘궁하면 통한다’ 즉 ‘窮卽通’의 정신으로 과거 값지고 아픈 경험을 토대로 다시 일어나 STX건설의 저력을 전 세계에 알리는 일에 모든 노력을 다 할 것 입니다.</p>
+                    <p class="name" th:text="#{intro.003}">STX건설 주식회사 회장  이현우 </p>
+                </div>
+            </div>
+         	 -->
+
+            <div class="section-text">
+                <div class="left">
+                    <p class="subject text_medium">A New Beginning towards the world!</p>
+                    <p class="paragraph text_regular">STX건설은 ‘Rebuild the Value for Vision 2030’이라는 슬로건을 목표로 그간 전경련 회관 신축, 부산국제금용센터 복 합개발, 한강플로팅 아일랜드, OSTT 온산탱크터미널, 이라크 디젤파워플랜트, STX대련 조선해양 종합생산기지 등 새로운 랜드마크 건설과 대형 개발사업에 참여하여 풍부한 공사실적과 값진 기술력을 쌓아온 경험을 통해 앞으로도 새로운 고품격 아파트 브랜드 확장과 수요자 중심의 새로운 주거문화를 창출할 것 입니다. 또한 국내를 넘어 아시아, 중동, 오세아니아, 아프 리카 등 글로벌 네트워크를 바탕으로 해외수주에 더욱 박차를 가할 것이며, 도로, 항만, 철도 등의 국가기간사업에서도 우리가 가진 뛰어난 역량을 다시 증명하여 보여 줄 것 입니다.</p>
+
+                    <p class="subject text_medium mt50">높은 경쟁력 확보로 혁신을 꿈꾸다!</p>
+                    <p class="paragraph text_regular">저희는 2020년 수주 2조를 시작으로 2030년에는 그 2배인 4조까지 달성코자 기존 성장전략을 보완하여, 매출 및 영업이익 목표 달성을 위해 끊임없는 기술개발과 최적의 프로세스 구축, 재무건전성 제고, 핵심 성장역량 구축에 최선을 다할 것입니다. 이를 달성하기 위해선</p>
+                </div>
+                <div class="right">
+                    <p class="text_regular">첫째, 원가 및 품질 경쟁력 확보입니다. 운영혁신 활동을 질적으로 심화하여 수익성을 제고하고 고객만족 품질 강화에 집중할 것 입니다.</p>
+
+                    <p  class="mt40 text_regular">둘째, 차별화 경쟁력을 확보하기 위한 기술 개발입니다. 그동안 미흡했던 R&amp;D투자로 선진 기업과의 벌어진 기술격차를 해소하기 위해 끊임없는 노력이 필요한 때입니다. 우선 선도기 업 수준의 가격 프리미엄을 단가에 확보하여 기술 분야와 시장 확대에 대비한 중장기 개발과제에 집중해 나갈 것 입니다.</p>
+
+                    <p class="mt40 text_regular">셋째, 경쟁력 강화를 구현하기 위한 혁신적인 경영 인프라 구축입니다. 저희는 글로벌전략 실행인력 확보, 업무프로세스 선진 화, 고역량 인력 충원과 비즈니스 네트워크 시스템 혁신 등을 통한 내, 외부 고객만족에 최우선 가치를 둘 것 입니다. 과거의 위기를 더 큰 성장의 출발점이라 확신하며, 여러분께서도 저희 STX건설이 위기를 넘어 큰 도약을 이룰 수 있도록 애정 어린 관심과 격려를 베풀어 주시길 당부 드립니다. 저 또한 STX건설의 경영을 맡고 있는 새로운 선장으로서, 현재 저희가 추진 하고 있는 세계를 향한 대장정의 항해를 기필코 완수하여 회사가치를 극대화하고 고객만족을 최우선 가치로 함으로서 여러분 의 성원에 보답할 것을 약속드리겠습니다.</p>
+
+                    <p class="mt40 text_regular">감사합니다.</p>
+
+                </div>
+            </div>
+            <!-- //section-text -->
+        </div>
+        <!-- //content  -->
+    </div>
+
+    <footer th:replace="/fragments/footer :: footer">풋터</footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+package com.kimjieun99.controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.kimjieun99.model.BoardDao;
+import com.kimjieun99.model.BoardDto;
+
+
+@WebServlet("/board/list")
+public class BoardListController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public BoardListController() {
+        super();
+    }
+
+	protected void service(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		BoardDao boardDao = new BoardDao();
+		
+		int clickedPage = Integer.parseInt(request.getParameter("page"));
+		
+		int start = 1;
+	    int end = 5;
+		
+		int total = boardDao.getTotal();
+		int listPerPage = 5;
+		int pageTotal = (int)(Math.ceil(total / listPerPage));
+		
+		ArrayList<BoardDto> boardList = (ArrayList<BoardDto>)boardDao.getAllBoard02(1,3);
+		request.setAttribute("boardList", boardList);
+		request.setAttribute("total", total);
+		request.setAttribute("listPerPage", listPerPage);
+		//request.setAttribute("pageTotal", pageTotal);
+		request.setAttribute("pageStart", 1);
+		request.setAttribute("pageEnd", pageTotal);
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/board/list.jsp");
+		dispatcher.forward(request, response);
+	}
+
+}

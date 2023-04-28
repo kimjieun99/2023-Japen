@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<configuration>
+	<properies resource="com/kimjieun99/mybatis/db.properties"></properies>
+	<typeAliases>
+	<typeAliases type="com.kimjieun99.model.BoardDto" alias="BoardDto"/>
+	<typeAliases type="com.kimjieun99.model.MemberDto" alias="MemberDto"/>
+	</typeAliases>
+	<environments default="development">
+	<environments id="development">
+	<transactionManager type="JDBC">
+	<dataSource type="POOLED">
+	<property name="driver" value="${driver}">
+	<property name="url" value="${url}">
+	<property name="userName" value="${userName}">
+	<property name="password" value="${password}">
+	</dataSource>
+	</environments>
+	</environments>
+</configuration>

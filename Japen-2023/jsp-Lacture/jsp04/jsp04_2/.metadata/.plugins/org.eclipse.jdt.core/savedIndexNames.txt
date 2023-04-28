@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\user\Desktop\2023 Japan\jsp-Lacture\jsp04\jsp04_2\.metadata\.plugins\org.eclipse.jdt.core
+2037535669.index
+2951422389.index
+1865797976.index
+3397755815.index

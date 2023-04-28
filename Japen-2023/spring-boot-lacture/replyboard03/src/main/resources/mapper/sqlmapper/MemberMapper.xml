@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kimjieun99.replyboard03.dao.MemberDao">
+<insert id="insertMember" parameterType="MemberDto">
+INSERT INTO REPLYBOARDMEMBER VALUES (
+    REPLYBOARDMEMBER_SEQ.NEXTVAL,
+    #{userId},
+    #{userPw},
+    #{email},
+    #{userName},
+    SYSDATE,
+    #{originalFilePath},
+    #{renameFilePath}
+)
+</insert>
+<select id="loginMember" parameterType="MemberDto" resultType="MemberDto">
+SELECT * FROM REPLYBOARDMEMBER WHERE USERID = #{userId} AND USERPW = #{userPw}
+</select>
+</mapper>

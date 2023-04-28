@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% 
+String loggeduserName = (String)session.getAttribute("userName");
+String loggeduserId = (String)session.getAttribute("userId");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KIMJIEUN`S MEDIA</title>
+</head>
+<body>
+<h1><%=loggeduserName %>님 안녕하세요.</h1>
+</body>
+</html>

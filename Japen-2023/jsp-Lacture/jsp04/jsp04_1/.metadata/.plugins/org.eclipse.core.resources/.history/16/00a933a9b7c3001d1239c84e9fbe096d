@@ -1,0 +1,19 @@
+package com.kimjieun99.model;
+
+import org.apache.ibatis.session.SqlSession;
+
+public class BoardDao {
+	public int insertBoard(BoardDto boardDto) {
+		int result = 0;
+		SqlSession sqlSession = MybatisConnectionFactory.getSqlSession();
+        result = sqlSession.insert("InsertBoard",boardDto);
+        if(result>0) {
+        	sqlSession.commit();
+        } else {
+        	sqlSession.rollback();
+        }
+        sqlSession.close();
+        return result;
+	}
+	public List<BoardDto> getAllBoard
+}

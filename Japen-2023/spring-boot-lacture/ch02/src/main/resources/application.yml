@@ -1,0 +1,12 @@
+server: 
+    Port:   9090
+    servlet:    
+        encoding:   
+            charset:    UTF-8
+spring: 
+    output:
+        ansi:
+            enabled:    always
+logging:
+    level:  
+        '[com.kimjieun99.ch02]':    DEBUG
